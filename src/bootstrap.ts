@@ -43,7 +43,11 @@ export function permutationTest(
   const combined = [...a, ...b];
   let count = 0;
   for (let i = 0; i < iterations; i++) {
-    const shuffled = resample(combined);
+    const shuffled = [...combined];
+    for (let j = shuffled.length - 1; j > 0; j--) {
+      const k = Math.floor(Math.random() * (j + 1));
+      [shuffled[j], shuffled[k]] = [shuffled[k], shuffled[j]!];
+    }
     const permA = shuffled.slice(0, a.length);
     const permB = shuffled.slice(a.length);
     if (Math.abs(statFn(permA) - statFn(permB)) >= observed) count++;

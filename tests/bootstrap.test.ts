@@ -65,9 +65,9 @@ describe("permutationTest", () => {
   });
 
   it("different groups => low p", () => {
-    const a = [1, 2, 3];
-    const b = [100, 200, 300];
-    const p = permutationTest(a, b, (s) => s.reduce((a, b) => a + b, 0) / s.length, 500);
+    const a = [1, 2, 3, 4, 5];
+    const b = [100, 200, 300, 400, 500];
+    const p = permutationTest(a, b, (s) => s.reduce((a, b) => a + b, 0) / s.length, 1000);
     expect(p).toBeLessThan(0.05);
   });
 });
