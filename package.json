@@ -1,0 +1,54 @@
+{
+  "name": "stochast",
+  "version": "0.0.1",
+  "description": "Stochastic utilities: distributions, sampling, statistics, information theory, Markov chains, bootstrap, Monte Carlo. Zero dependencies.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "author": "mra1k3r0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mra1k3r0/stochast"
+  },
+  "homepage": "https://github.com/Mra1k3r0/stochast#readme",
+  "bugs": {
+    "url": "https://github.com/Mra1k3r0/stochast/issues"
+  },
+  "keywords": [
+    "stochastic",
+    "gaussian",
+    "random",
+    "weighted-pick",
+    "noise",
+    "ema",
+    "simulation",
+    "monte-carlo"
+  ]
+}
